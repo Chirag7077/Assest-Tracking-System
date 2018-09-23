@@ -12,7 +12,7 @@ def home():
 @app.route("/login",methods=['GET','POST'])
 def login():
 	form = LoginForm()
-	if from.validate_on_submit():
+	if form.validate_on_submit():
 		email = form.email.data
 		passwd = form.password.data
 		status, roles = authenticate(email,passwd)
