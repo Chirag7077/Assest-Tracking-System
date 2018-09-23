@@ -1,5 +1,5 @@
 from assettrackingsystem import app
-from flask import render_template, url_for, flash
+from flask import render_template, url_for, flash, redirect
 from assettrackingsystem.forms import LoginForm
 from functions import authenticate
 
@@ -17,7 +17,9 @@ def login():
 		passwd = form.password.data
 		status, roles = authenticate(email,passwd)
 		if status = 1:
-			return 
+			return redirect(url_for('home'))
+		else:
+			flash("Login Unsucessful. Please try again.","danger")
 	
 	return render_template('login.html', title="Login", form=form)
 
