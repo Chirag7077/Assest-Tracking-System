@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Asset Management</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+	<link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='image/logo.png') }}"/>
+</head>
+<body>
+	<div class="base">
+		{% block main %}
+		{% endblock %}
+	</div>
+</body>
+</html>
