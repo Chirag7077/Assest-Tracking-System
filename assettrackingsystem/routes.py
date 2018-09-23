@@ -16,7 +16,7 @@ def login():
 		email = form.email.data
 		passwd = form.password.data
 		status, roles = authenticate(email,passwd)
-		if status = 1:
+		if status == 1:
 			return redirect(url_for('home'))
 		else:
 			flash("Login Unsucessful. Please try again.","danger")
