@@ -1,6 +1,3 @@
-from flask_bcrypt import Bcrypt
-
-
 def create_connection():
     import pymysql
     
