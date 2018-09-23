@@ -1,6 +1,7 @@
 from assettrackingsystem import app
 from flask import render_template, url_for, flash
 from assettrackingsystem.forms import LoginForm
+from functions import authenticate
 
 @app.route("/")
 @app.route("/home")		
@@ -11,6 +12,11 @@ def home():
 @app.route("/login",methods=['GET','POST'])
 def login():
 	form = LoginForm()
+	if from.validate_on_submit():
+		email = form.email.data
+		passwd = form.password.data
+		status, roles = authenticate(email,passwd)
+	
 	return render_template('login.html', title="Login", form=form)
 
 @app.route("/dashboard")
