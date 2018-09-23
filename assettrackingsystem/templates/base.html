@@ -9,7 +9,12 @@
 	    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 	    <!-- Title -->
-	    <title>AssetManagement-VESIT</title>
+	    {% if title %}
+		<title>{{ title }}</title>
+		{% else %}
+			<title>AssetManagement-VESIT</title>	
+		{% endif %}
+	    
 
 	    <!-- Favicon -->
 	    <link rel="icon" href="{{ url_for('static', filename='Home/img/core-img/favicon.ico') }}">
