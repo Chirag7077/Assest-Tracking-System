@@ -16,7 +16,8 @@ def login():
 		email = form.email.data
 		passwd = form.password.data
 		status, roles = authenticate(email,passwd)
-		if sr
+		if status = 1:
+			return 
 	
 	return render_template('login.html', title="Login", form=form)
 
