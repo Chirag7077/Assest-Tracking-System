@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="description" content="">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	    <!-- Title -->
+	    <title>AssetManagement-VESIT</title>
+
+	    <!-- Favicon -->
+	    <link rel="icon" href="{{ url_for('static', filename='Home/img/core-img/favicon.ico') }}">
+
+	    <!-- Core Stylesheet -->
+	    <link href="{{ url_for('static', filename='Home/style.css') }}" rel="stylesheet">
+
+	    <!-- Responsive CSS -->
+	    <link href="{{ url_for('static', filename='Home/css/responsive.css') }}" rel="stylesheet">
+
+	</head>
+</head>
+<body>
+	<!-- ***** Header Area Start ***** -->
+	<header class="header_area animated">
+	    <div class="container-fluid">
+	        <div class="row align-items-center">
+	            <!-- Menu Area Start -->
+	            <div class="col-12 col-lg-10">
+	                <div class="menu_area">
+	                    <nav class="navbar navbar-expand-lg navbar-light">
+	                        <!-- Logo -->
+	                        <a class="navbar-brand" href="#">Vesit</a>
+	                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+	                        <!-- Menu Area -->
+	                        <div class="collapse navbar-collapse" id="ca-navbar">
+	                            <ul class="navbar-nav ml-auto" id="nav">
+	                                <li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
+	                                <!--li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+	                                <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+	                                <li class="nav-item"><a class="nav-link" href="#screenshot">Screenshot</a></li>
+	                                <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+	                                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li-->
+	                                <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+	                                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+	                            </ul>
+	                            <div class="login-button d-lg-none">
+	                                <a href="#">Log_IN</a>
+	                            </div>
+	                        </div>
+	                    </nav>
+	                </div>
+	            </div>
+	            <!-- Login btn -->
+	            <div class="col-12 col-lg-2">
+	                <div class="login-button d-none d-lg-block">
+	                    <a href="#">Log_IN</a>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</header>
+	<!-- ***** Header Area End ***** -->
+	{% block main %}{% endblock %}
+	<!-- ***** Footer Area Start ***** -->
+	    <footer class="footer-social-icon text-center section_padding_70 clearfix">
+	        <!-- footer logo -->
+	        <div class="footer-text">
+	            <h2>Vesit</h2>
+	        </div>
+	        <!-- social icon-->
+	        <div class="footer-social-icon">
+	            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+	            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+	            <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+	            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+	        </div>
+	        <div class="footer-menu">
+	            <nav>
+	                <ul>
+	                    <li><a href="#">About</a></li>
+	                    <li><a href="#">Terms &amp; Conditions</a></li>
+	                    <li><a href="#">Privacy Policy</a></li>
+	                    <li><a href="#">Contact</a></li>
+	                </ul>
+	            </nav>
+	        </div>
+	        <!-- Foooter Text-->
+	        <div class="copyright-text">
+	            <p>Copyright ©2018 Vesit | Designed by ASWATHAMA</p>
+	        </div>
+	    </footer>
+	    <!-- ***** Footer Area Start ***** -->
+
+	<!-- Jquery-2.2.4 JS -->
+	<script src="{{ url_for('static', filename='Home/js/jquery-2.2.4.min.js') }}"></script>
+	<!-- Popper js -->
+	<script src="{{ url_for('static', filename='Home/js/popper.min.js') }}"></script>
+	<!-- Bootstrap-4 Beta JS -->
+	<script src="{{ url_for('static', filename='Home/js/bootstrap.min.js') }}"></script>
+	<!-- All Plugins JS -->
+	<script src="{{ url_for('static', filename='Home/js/plugins.js') }}"></script>
+	<!-- Slick Slider Js-->
+	<script src="{{ url_for('static', filename='Home/js/slick.min.js') }}"></script>
+	<!-- Footer Reveal JS -->
+	<script src="{{ url_for('static', filename='Home/js/footer-reveal.min.js') }}"></script>
+	<!-- Active JS -->
+	<script src="{{ url_for('static', filename='Home/js/active.js') }}"></script>
+</body>
+</html>
