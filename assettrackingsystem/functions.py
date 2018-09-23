@@ -1,3 +1,6 @@
+from bcrypt import Bcrypt
+
+
 def create_connection():
     import pymysql
     
