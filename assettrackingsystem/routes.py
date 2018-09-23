@@ -2,6 +2,7 @@ from assettrackingsystem import app
 from flask import render_template, url_for, flash, redirect
 from assettrackingsystem.forms import LoginForm
 from assettrackingsystem.functions import authenticate
+from flask_bcrypt import Bcrypt
 
 @app.route("/")
 @app.route("/home")		
