@@ -12,3 +12,7 @@ def home():
 def login():
 	form = LoginForm()
 	return render_template('login.html', title="Login", form=form)
+
+@app.route("/dashboard")
+def dashboard():
+	return render_template("Dash_template.html", title="Dashboard")

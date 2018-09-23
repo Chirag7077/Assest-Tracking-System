@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}	
+	<br><br><br><br>
 	<div class="content-section">
 		<form method="POST" action="">
 			{{ form.hidden_tag() }}
@@ -37,7 +38,7 @@
 				</div>
 			</fieldset>
 			<div class="form-group">
-				{{ form.submit(class="btn btn-success") }}
+				{{ form.submit(class="btn btn-outline-info") }}
 			</div>
 		</form>
 	</div>

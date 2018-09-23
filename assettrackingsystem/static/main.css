@@ -1,11 +1,11 @@
 body {
-  background: #fafafa;
+  background: #fff;
   color: #333333;
   margin-top: 5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #444444;
+  color: #000;
 }
 
 .bg-steel {
