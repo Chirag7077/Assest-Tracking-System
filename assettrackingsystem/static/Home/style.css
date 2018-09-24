@@ -318,7 +318,7 @@ p {
 .menu_area .navbar-brand {
     font-size: 72px;
     font-weight: 700;
-    color: transparent;
+    color: #fff;
     margin: 0;
     line-height: 1;
     padding: 0;
@@ -332,7 +332,7 @@ p {
 
 
 .menu_area {
-    position: absolute;
+    position: relative;
     z-index: 2;
 }
 
@@ -411,7 +411,7 @@ p {
     height: 900px;
     position: relative;
     z-index: 1;
-    background-position: top center;
+    background-position: bottom center;
     background-size: cover;
 }
 

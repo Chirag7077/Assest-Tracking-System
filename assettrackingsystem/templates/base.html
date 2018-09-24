@@ -59,15 +59,17 @@
 	            <!-- Login btn -->
 	            <div class="col-12 col-lg-2">
 	                <div class="login-button d-none d-lg-block">
-	                    <a href="{{ url_for('login') }}">Login</a>
+	                    <a href="{{ url_for('login') }}">LogIn</a>
 	                </div>
 	            </div>
 	        </div>
 	    </div>
 	</header>
 	<!-- ***** Header Area End ***** -->
+	<section>
+		<br><br>
 	{% block main %}{% endblock %}
-
+	</section>
 	<main role="main" class="container">
       <div class="row">
         <div class="col-md-8">
