@@ -1,6 +1,6 @@
 from assettrackingsystem import app
 from assettrackingsystem import bcrypt
-from flask import render_template, url_for, flash, redirect
+from flask import render_template, url_for, flash, redirect, session
 from assettrackingsystem.forms import LoginForm
 from assettrackingsystem.functions import authenticate
 from flask_login import login_user, current_user, logout_user, login_required
@@ -21,8 +21,8 @@ def login():
 		#hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
 		status, roles = authenticate(email,password)
 		if status == 1:
-			login_user(user, remember=form.remember.data)
-			return redirect(url_for('home'))
+			session['email'] = email
+			return redirect(url_for('dashboard'))
 		else:
 			flash("Login Unsucessful. Please try again.","danger")
 	
