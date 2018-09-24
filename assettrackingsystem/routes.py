@@ -1,8 +1,10 @@
 from assettrackingsystem import app
+from assettrackingsystem import bcrypt
 from flask import render_template, url_for, flash, redirect
 from assettrackingsystem.forms import LoginForm
-#from assettrackingsystem.functions import authenticate
-from flask_bcrypt import Bcrypt
+from assettrackingsystem.functions import authenticate
+from flask_login import login_user, current_user, logout_user, login_required
+#from flask_bcrypt import Bcrypt
 
 @app.route("/")
 @app.route("/home")		
@@ -13,15 +15,17 @@ def home():
 @app.route("/login",methods=['GET','POST'])
 def login():
 	form = LoginForm()
-	"""if form.validate_on_submit():
+	if form.validate_on_submit():
 		email = form.email.data
-		passwd = form.password.data
-		status, roles = authenticate(email,passwd)
+		password = form.password.data
+		#hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
+		status, roles = authenticate(email,password)
 		if status == 1:
+			login_user(user, remember=form.remember.data)
 			return redirect(url_for('home'))
 		else:
 			flash("Login Unsucessful. Please try again.","danger")
-	"""
+	
 	return render_template('login.html', title="Login", form=form)
 
 @app.route("/dashboard")

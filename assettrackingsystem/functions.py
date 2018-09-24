@@ -1,3 +1,5 @@
+from assettrackingsystem import bcrypt
+
 def create_connection():
     import pymysql
     
