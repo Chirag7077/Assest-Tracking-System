@@ -19,10 +19,11 @@ def login():
 		email = form.email.data
 		password = form.password.data
 		#hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
-		status, roles = authenticate(email,password)
+		status, roles, user_id = authenticate(email,password)
 		if status == 1:
-			session['email'] = email
-			return redirect(url_for('dashboard'))
+			session['user_id'] = email
+			session['roles'] = roles
+			return redirect(url_for('dashboard')), session
 		else:
 			flash("Login Unsucessful. Please try again.","danger")
 	
@@ -30,4 +31,7 @@ def login():
 
 @app.route("/dashboard")
 def dashboard():
-	return render_template("Dash_template.html", title="Dashboard")
+	if session:
+		return render_template("Dash_template.html", title="Dashboard")
+	else:
+		return render_template("Dash_template.html", title="Dashboard no session")

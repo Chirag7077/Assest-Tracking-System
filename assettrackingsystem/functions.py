@@ -17,20 +17,21 @@ def authenticate(email, passwd):
         if t:
             if passwd == t[1]:
                 status = 1
+                user_id = t[0]
                 cursor.execute("select role from user_roles where user_id = '" + str(t[0]) +"';" )
                 t2 = cursor.fetchall()
                 roles = set()
                 for i in t2:
                     roles.add(i[0])
-                return status,roles
+                return status,roles,user_id
             else:
-                return 0,None
+                return 0,None,None
         else:
-            return 0,None
+            return 0,None,None
     finally:
         cursor.close()
         conn.close()
 
 #roles = set()
-status, roles = authenticate("jalajlimaye@gmail.com","jalaj333")
+#status, roles, id = authenticate("jalajlimaye@gmail.com","jalaj333")
 
