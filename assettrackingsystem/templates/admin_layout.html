@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+            <title>AssetManagement-VESIT</title>    
+        {% endif %}
+
+<link rel="icon" href="{{ url_for('static', filename='Home/img/core-img/favicon.ico') }}">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="{{url_for('static',filename='Home/css/bootstrap.min.css')}}">
+
+<link href="{{ url_for('static', filename='admin/css/admin_layout.css') }}" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h2 style="background-color: black;color:grey;text-align: center;margin: 0;padding:5px;">Admin</h2>
+</header>
+
+<div class="sidenav">
+  
+  <button class="dropdown-btn">Users 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="{{ url_for('admin_add_user') }}">Add</a>
+    <a href="{{ url_for('admin_modify_user') }}">Modify</a>
+    <a href="{{ url_for('admin_delete_user') }}">Delete</a>
+  </div>
+  <button class="dropdown-btn">Asset
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Add</a>
+    <a href="#">Modify</a>
+    <a href="#">Delete</a>
+  </div>
+  <a href="#report">Report</a>
+    <a href="#logout">Logout</a>
+</div>
+
+<div class="main">
+  
+
+</div>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+
+{% block admin %}{% endblock %}
+
+</body>
+</html>
