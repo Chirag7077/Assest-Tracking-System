@@ -46,6 +46,21 @@ def admin_modify_user():
 def admin_delete_user():
 	return render_template("admin_delete_user.html",title="admin add")
 
+@app.route("/admin_add_asset")
+def admin_add_asset():
+	return render_template("admin_add_asset.html",title="admin add")
+
+
+@app.route("/admin_delete_asset")
+def admin_delete_asset():
+	return render_template("admin_delete_asset.html",title="admin delete")
+
+
+@app.route("/admin_modify_asset")
+def admin_modify_asset():
+	return render_template("admin_modify_asset.html",title="admin modify")
+
+
 @app.route("/dashboard")
 def dashboard():
 	return render_template("Dash_template.html", title="Dashboard")

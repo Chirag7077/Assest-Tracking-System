@@ -37,9 +37,9 @@
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
-    <a href="#">Add</a>
-    <a href="#">Modify</a>
-    <a href="#">Delete</a>
+    <a href="{{ url_for('admin_add_asset') }}">Add</a>
+    <a href="{{ url_for('admin_modify_asset') }}">Modify</a>
+    <a href="{{ url_for('admin_delete_asset') }}">Delete</a>
   </div>
   <a href="#report">Report</a>
     <a href="#logout">Logout</a>
